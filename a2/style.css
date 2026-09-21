@@ -1,0 +1,46 @@
+body {
+	background-color: rgba(0, 0, 0, 0.6);
+	background-image: url("images/forest.jpg");
+	background-blend-mode: multiply;
+	background-size: cover;
+	color: #eeeeee;
+}
+
+.main {
+	background-color: #111111;
+	border: 2px solid #c0c0ff;
+	width: 75vw;
+	margin: auto;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.picture_container {
+	width: 77vw;
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.picture {
+	background-color: #111111;
+	border: 2px solid #c0c0ff;
+	width: 50wv;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	transition: 50ms;
+}
+
+.picture:hover {
+	transform: scale(1.1);
+}
+
+.caption {
+	color: #eeeeee;
+	margin: 0px;
+}
+
+.picture img {
+	width: 100%;
+}
