@@ -1,0 +1,1 @@
+package.json here just for prettier plugin to disable =/>= on self closing html tags
