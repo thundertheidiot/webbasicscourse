@@ -78,6 +78,12 @@ nav a:hover {
 	align-items: center;
 }
 
+.cards-section {
+	display: flex;
+	align-items: center;
+	padding-bottom: 1.2rem;
+}
+
 .hero-content {
 	max-width: 700px;
 }
@@ -129,13 +135,13 @@ h1 {
 }
 
 .cards {
+	margin-top: 2rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1.5rem;
 }
 
 .card {
-	margin-top: 2rem;
 	padding: 2rem;
 	width: 400px;
 	background-color: var(--light);
