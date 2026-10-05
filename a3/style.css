@@ -1,0 +1,57 @@
+/* thunder */
+body {
+	background-color: rgba(0, 0, 0, 0.6);
+	background-image: url("images/forest.jpg");
+	background-blend-mode: multiply;
+	background-size: cover;
+	color: #eeeeee;
+
+	font-family: sans-serif;
+}
+
+.textbox {
+	padding: 1rem;
+	margin: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	border-radius: 5px;
+	border: 2px solid #c0c0ff;
+	background-color: #111111;
+
+	color: #ffffff;
+}
+
+.main {
+	width: 75vw;
+}
+
+.picture_container {
+	width: 77vw;
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.picture {
+	background-color: #111111;
+	border: 2px solid #c0c0ff;
+	width: 50wv;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	transition: 50ms;
+}
+
+.picture:hover {
+	transform: scale(1.1);
+}
+
+.caption {
+	color: #eeeeee;
+	margin: 0px;
+}
+
+.picture img {
+	width: 100%;
+}

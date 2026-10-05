@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+		<link href="style.css" rel="stylesheet">
 		<link href="gallery.css" rel="stylesheet">
 	</head>
 
@@ -12,7 +13,7 @@
 						<img src="images/fog.jpg">
 					</div>
 				</a>
-				<div class="description">hi</div>
+				<div class="textbox description">A foggy morning drive</div>
 			</div>
 
 			<div class="container" id="two">
@@ -21,7 +22,7 @@
 						<img src="images/sauna.jpg">
 					</div>
 				</a>
-				<div class="description">hi</div>
+				<div class="textbox description">Sauna ready to be heated</div>
 			</div>
 
 			<div class="container" id="three">
@@ -30,7 +31,7 @@
 						<img src="images/darkness.jpg">
 					</div>
 				</a>
-				<div class="description">hi</div>
+				<div class="textbox description">A view into the night</div>
 			</div>
 
 			<div class="container" id="four">
@@ -39,8 +40,34 @@
 						<img src="images/sunset.jpg">
 					</div>
 				</a>
-				<div class="description">hi</div>
+				<div class="textbox description">The sun sets</div>
 			</div>
+		</div>
+
+		<div class="textbox main">
+			<h1>Pure HTML+CSS Image Carousel</h1>
+
+			<p>
+				The containers are <code>display: inline-block;</code> they each have an
+				id. The image cards are wrapped in a link that points to the
+				corresponding id.
+			</p>
+
+			<p>
+				The <code>supercontainer</code> has
+				<code>overflow-x: scroll; display: flex; </code> so that the cards
+				extend off screen, and the scroll bars are hidden. Cards get
+				<code>scroll-snap-align: center;</code> so the view snaps to the card.
+			</p>
+
+			<p>This might be broken on chromium browsers.</p>
+
+			<p>
+				Read the gallery css <a href="gallery.css">here</a> (<a
+					href="https://github.com/thundertheidiot/webbasicscourse/blob/main/a3/gallery.css"
+					>or on GitHub</a
+				>)
+			</p>
 		</div>
 	</body>
 </html>
