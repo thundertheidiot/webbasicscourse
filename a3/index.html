@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.grid {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+			}
+
+			div.container {
+				min-width: 5px;
+				background-color: #aaaaaa;
+				margin: 0.5rem;
+				border: 2px solid black;
+			}
+
+			.one,
+			.two,
+			.three,
+			.four {
+				height: 1px;
+			}
+
+			.one:target,
+			.two:target,
+			.three:target,
+			.four:target {
+				height: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="grid">
+			<a href="#one">
+				<div class="container">
+					<h1 id="one" class="one"></h1>
+				</div>
+			</a>
+
+			<a href="#two">
+				<div class="container">
+					<h1 id="two" class="two"></h1>
+				</div>
+			</a>
+
+			<a href="#three">
+				<div class="container">
+					<h1 id="three" class="three"></h1>
+				</div>
+			</a>
+
+			<a href="#four">
+				<div class="container">
+					<h1 id="four" class="four"></h1>
+				</div>
+			</a>
+		</div>
+	</body>
+</html>
