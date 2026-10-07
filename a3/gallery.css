@@ -46,7 +46,7 @@ body {
 	/* this hides the blurry image overflow */
 	overflow: hidden;
 
-	border: 2px solid black;
+	border: 2px solid #c0c0ff;
 	border-radius: 5px;
 
 	/* take width from the enlargened container */

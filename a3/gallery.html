@@ -6,6 +6,11 @@
 	</head>
 
 	<body>
+		<header class="textbox main">
+			<a href="index.html">Home</a>
+			<a href="gallery.html#one">Gallery</a>
+		</header>
+
 		<div class="supercontainer">
 			<div class="container" id="one">
 				<a href="#one">
@@ -50,7 +55,8 @@
 			<p>
 				The containers are <code>display: inline-block;</code> they each have an
 				id. The image cards are wrapped in a link that points to the
-				corresponding id.
+				corresponding id. Unfortunately the header gets hidden because the page
+				has to scroll down to the card.
 			</p>
 
 			<p>
@@ -60,7 +66,10 @@
 				<code>scroll-snap-align: center;</code> so the view snaps to the card.
 			</p>
 
-			<p>This might be broken on chromium browsers.</p>
+			<p>
+				WebKit is completely untested, should be functional on Firefox and
+				Chromium-based browsers.
+			</p>
 
 			<p>
 				Read the gallery css <a href="gallery.css">here</a> (<a
