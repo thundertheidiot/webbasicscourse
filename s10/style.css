@@ -66,6 +66,11 @@ nav ul {
 nav a {
 	color: var(--dark);
 	text-decoration: none;
+	font-weight: normal;
+}
+
+nav a[aria-current="page"] {
+	font-weight: bold;
 }
 
 nav a:hover {
