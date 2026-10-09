@@ -1,0 +1,113 @@
+<!--
+    Fake Edu - Basics of Web Development
+
+    Original author: Ville Heikkiniemi
+    Modified by: thunder
+    Last modified: 2026-08-11
+
+    Based on the original course template.
+-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ville Heikkiniemi">
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="style.css">
+
+		<title>Fake Edu | Basics of Web Development</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<div class="logo">fake <span>edu</span></div>
+
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#topics">Topics</a></li>
+						<li><a href="index.html#">About</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container">
+					<div class="hero-content">
+						<span class="label">Basics of Web Development</span>
+
+						<h1>Contact us</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact" id="contact">
+				<div class="container">
+					<h2>Contact us</h2>
+
+					<form class="card" action="https://httpbin.org/post" method="post">
+						<label for="name">Name</label>
+						<input name="name" id="name" type="text" value="" required>
+						<label for="email">Email Address</label>
+						<input
+							name="email"
+							type="email"
+							autocomplete="email"
+							value=""
+							required
+						>
+						<label for="phone">Phone Number</label>
+						<input name="phone" id="phone" type="tel" value="" required>
+						<label for="reason">Contact Reason</label>
+						<select name="reason" value="" required>
+							<option value="">Choose a subject</option>
+							<option value="feedback">Feedback</option>
+							<option value="question">Question</option>
+							<option value="other">Other</option>
+						</select>
+
+						<strong>Desired Contact Method:</strong>
+
+						<label for="phone">Phone</label>
+						<input
+							name="preferred_method"
+							type="radio"
+							value="Phone"
+							id="phone"
+							required
+						>
+
+						<label for="email">Email</label>
+						<input
+							name="preferred_method"
+							type="radio"
+							value="Email"
+							id="email"
+							required
+						>
+
+						<label for="message">Message</label>
+						<textarea name="message" id="message" value="" required></textarea>
+
+						<input name="" type="submit" value="Send">
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2026 Fake Edu</p>
+			</div>
+		</footer>
+	</body>
+</html>
