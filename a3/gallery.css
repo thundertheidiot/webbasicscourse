@@ -1,9 +1,14 @@
 :root {
 	--bg-color: #1e1e1e;
+
+	--card-margin: 0.75rem;
+	/* seemingly impossible to get right, still has small jumps */
+	--description-offset: calc(24vw + calc(var(--card-margin) / 2));
 }
 
 body {
 	background-color: var(--bg-color);
+	margin: 0; /* secret margin around pushing supercontainer around, bad for calc */
 }
 
 .supercontainer > a {
@@ -41,7 +46,7 @@ body {
 }
 
 .card {
-	margin: 0.5rem;
+	margin: var(--card-margin);
 
 	/* this hides the blurry image overflow */
 	overflow: hidden;
@@ -78,6 +83,14 @@ body {
 	text-align: center;
 
 	width: 50vw;
+}
+
+div#one > .description {
+	margin-left: var(--description-offset);
+}
+
+div#four > .description {
+	margin-right: var(--description-offset);
 }
 
 .info {
