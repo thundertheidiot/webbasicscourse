@@ -1,0 +1,78 @@
+/* thunder */
+body {
+	background-color: rgba(0, 0, 0, 0.6);
+	background-image: url("images/forest.jpg");
+	background-blend-mode: multiply;
+	background-size: cover;
+	color: #eeeeee;
+
+	margin: 0;
+
+	font-family: sans-serif;
+}
+
+.textbox {
+	padding: 1rem;
+	margin: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	border-radius: 5px;
+	border: 2px solid #c0c0ff;
+	background-color: #111111;
+
+	color: #ffffff;
+}
+
+.main {
+	width: 75vw;
+}
+
+.caption {
+	color: #eeeeee;
+	margin: 0px;
+}
+
+nav,
+footer {
+	text-align: center;
+	padding: 1rem;
+}
+
+nav > a {
+	padding: inherit;
+	font-size: 24px;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: #c0c0ff;
+}
+
+header > a:hover {
+	text-decoration: underline;
+}
+
+code {
+	background-color: #090909;
+}
+
+.image-grid {
+	margin: 0 0.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 1fr));
+	margin: 0 2rem;
+}
+
+.card {
+	padding: 1rem;
+	background-color: #111111;
+	border: 2px solid #c0c0ff;
+	border-radius: 5px;
+}
+
+.card img {
+	width: 100%;
+}
