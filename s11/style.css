@@ -252,6 +252,18 @@ form.card > input[type="submit"]:hover {
 	background: var(--rose);
 }
 
+form.card > input:not([type="radio"]):user-invalid,
+form.card > select:user-invalid,
+form.card > textarea:user-invalid {
+	border: 2px dashed #b00020;
+}
+
+form.card > input:not([type="radio"]):user-valid,
+form.card > select:user-valid,
+form.card > textarea:user-valid {
+	border: 2px solid #24733c;
+}
+
 footer {
 	padding: 2rem 0;
 	background-color: var(--dark);
