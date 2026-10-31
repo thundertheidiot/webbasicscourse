@@ -1,0 +1,81 @@
+<!-- thunder -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<title>Sample website - Register</title>
+	</head>
+
+	<body>
+		<nav aria-label="Navigation menu">
+			<a href="index.html">Home</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="register.html">Register</a>
+		</nav>
+
+		<main>
+			<div class="textbox main border">
+				<h1>Register</h1>
+
+				Sign up to post your own content and receive updates from the community.
+
+				<form action="https://httpbin.org/post" method="post">
+					<label for="name"><strong>Name</strong>(required)</label>
+					<input id="name" name="name" type="text" value="" required>
+					<label for="email"><strong>Email Address </strong> (required)</label>
+					<input id="email" name="email" type="email" value="" required>
+					<label for="username"
+						><strong>Username</strong> (required, min 3 characters)</label
+					>
+					<input
+						id="username"
+						name="username"
+						type="text"
+						value=""
+						minlength="3"
+						required
+					>
+					<label for="password">
+						<strong>Password</strong>
+						(required, min 8 characters)
+					</label>
+					<input
+						id="password"
+						name="password"
+						type="password"
+						value=""
+						minlength="8"
+						required
+					>
+
+					<label for="user_type"><strong>User Type</strong> (required)</label>
+					<select id="user_type" name="user_type" value="" required>
+						<option value="">Choose your user type</option>
+						<option value="photographer">Photographer</option>
+						<option value="photography_enthusiast">
+							Photography enthusiast
+						</option>
+						<option value="other">Other</option>
+					</select>
+
+					<label>
+						I accept the
+						<a href="https://www.lipsum.com/feed/html">terms of service</a>
+						<input id="tos" tos="tos" type="checkbox" required>
+					</label>
+
+					<input name="submit" type="submit">
+				</form>
+			</div>
+		</main>
+
+		<footer>
+			<p>
+				Footer: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua
+			</p>
+		</footer>
+	</body>
+</html>
