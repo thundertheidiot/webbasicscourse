@@ -1,0 +1,189 @@
+/* thunder */
+:root {
+	--bg: #111111;
+	--fg: #eeeeee;
+
+	--accent: #c0c0ff;
+	--accent-v20: #262633; /* accent color, but with the hsv value taken down to 20 */
+}
+
+/*
+  make sizing include padding and border in the set width and height
+  this ensures that the content doesn't get cut off on small screen sizes
+ */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg);
+	background:
+		radial-gradient(
+			ellipse 50% 50% at 50% 50%,
+			var(--accent-v20) 0%,
+			transparent 70%
+		),
+		linear-gradient(120deg, var(--bg) 0%, #333333 100%);
+	background-attachment: fixed;
+
+	color: #eeeeee;
+
+	/* flexbox trick to make the footer stick to the bottom of the page */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	margin: 0;
+	font-family: sans-serif;
+}
+
+main {
+	/* eat up all the space */
+	flex: 1;
+	margin: 0 0.5rem;
+}
+
+.border {
+	border: 1px solid var(--accent);
+	border-radius: 5px;
+}
+
+.textbox {
+	padding: 1rem;
+	margin: 0.5rem auto;
+
+	background-color: var(--bg);
+}
+
+.main {
+	width: 100%;
+	max-width: 72rem;
+}
+
+nav,
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	background-color: var(--bg);
+}
+
+nav {
+	position: sticky;
+	top: 0px;
+	margin-bottom: 0.5rem;
+}
+
+footer {
+	margin-top: 0.5rem;
+}
+
+nav > a {
+	padding: inherit;
+	font-size: 24px;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: var(--accent);
+}
+
+nav > a:hover {
+	text-decoration: underline;
+}
+
+/*
+the changing grid columns feel a bit stupid, but i can't find a good min width for the repeat setup
+*/
+.image-grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	margin: 0 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+	.image-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1250px) {
+	.image-grid {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 1fr));
+	}
+}
+
+.card {
+	background-color: var(--bg);
+	background: radial-gradient(
+		ellipse 50% 50% at 50% 90%,
+		var(--bg) 0%,
+		var(--accent-v20) 80%
+	);
+	color: var(--fg);
+	overflow: hidden;
+}
+
+.card > img {
+	width: 100%;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+}
+
+.card > p {
+	margin: 1rem;
+}
+
+.card:hover {
+	/* outline goes on the "inside", so i don't need to calculate a width change here */
+	border: 2px solid var(--accent);
+	margin: -2px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 100%;
+	max-width: 48rem;
+}
+
+form label {
+	margin-top: 0.5rem;
+}
+
+form input:not([type="checkbox"]),
+form select {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid var(--accent);
+	border-radius: 5px;
+	background: #1b1b1b;
+	color: var(--fg);
+	font: inherit;
+}
+
+form input:not([type="checkbox"]):focus,
+form select:focus {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}
+
+form input[type="checkbox"] {
+	accent-color: var(--accent);
+}
+
+form input[type="submit"] {
+	margin-top: 0.5rem;
+	border: 1px solid var(--accent);
+	border-radius: 5px;
+	background: var(--bg);
+	color: var(--fg);
+	cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+	background: var(--accent-v20);
+}
