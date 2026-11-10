@@ -1,0 +1,195 @@
+:root {
+	--white: #f5f2ea;
+	--dark: #202b2b;
+	--dark-alt: #969c9e;
+
+	--light-alt: #e0dede;
+	--bar-fg: #292929;
+
+	--accent: #315c4d;
+
+	--background-gradient: linear-gradient(180deg, #0000, var(--dark) 90%);
+
+	color: var(--dark);
+
+	font-family: sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	background-color: var(--white);
+}
+
+.bar {
+	background-color: var(--light-alt);
+	color: var(--bar-fg);
+}
+
+.bar a,
+.bar a:visited {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 16px;
+	gap: 8px;
+
+	position: sticky;
+	top: 0;
+}
+
+footer {
+	display: flex;
+	padding: 16px 16px;
+
+	justify-content: center;
+}
+
+main {
+	flex: 1;
+	width: 100%;
+	max-width: 1800px;
+	margin: auto;
+}
+
+.index-main {
+	background-color: var(--dark-alt);
+}
+
+.main-grid {
+	width: 100%;
+	margin: 0;
+	display: grid;
+
+	gap: 8px;
+
+	grid-auto-flow: column;
+	grid-template-rows: 1fr 1fr;
+}
+
+.card {
+	min-height: 300px;
+	padding: 10px 50px;
+
+	display: flex;
+	flex-direction: column;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.5s ease;
+}
+
+.card:hover {
+	background-size: calc(100% + 16px);
+	cursor: pointer;
+}
+
+.cardcontent {
+	margin-top: auto;
+	color: var(--white);
+}
+
+.main-grid > .card:nth-child(1) {
+	background-image:
+		var(--background-gradient), url("images/kanenori-train-6907884.webp");
+	background-position: 40% 40%;
+}
+
+.main-grid > .card:nth-child(2) {
+	background-image:
+		var(--background-gradient), url("images/hpgruesen-eurostarzug-2736247.webp");
+	background-position: 30% 30%;
+}
+
+.main-grid > .card:nth-child(3) {
+	background-image:
+		var(--background-gradient), url("images/19752638-train-5905182.webp");
+	background-position: 50% 40%;
+	height: 100%;
+	grid-row: 1 / -1;
+}
+
+@media screen and (min-width: 900px) {
+}
+
+@media screen and (max-width: 900px) {
+	.main-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 3fr 2fr;
+	}
+
+	.main-grid > .card:nth-child(3) {
+		grid-column: 1 / -1;
+		grid-row: unset;
+	}
+}
+
+.hero {
+	padding: 120px 80px;
+	margin: 0;
+	width: 100%;
+	background-image:
+		linear-gradient(90deg, alpha(from var(--dark) / 90%) 30%, #0000 50%),
+		url("images/clickerhappy-train-3714601_1280.webp");
+	background-size: cover;
+	background-position: center center;
+
+	color: var(--white);
+}
+
+.hero p {
+	max-width: 300px;
+}
+
+a,
+a:visited {
+	color: var(--white);
+}
+
+a:focus,
+a:hover {
+	color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+	font-family: serif;
+	font-weight: bolder;
+}
+
+.subtitle {
+	color: var(--light-alt);
+	margin-top: 0px;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.button,
+.button:visited {
+	display: inline-block;
+	padding: 12px 20px;
+	border-radius: 10px;
+	color: var(--dark);
+	background-color: var(--white);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.button:hover {
+	color: var(--accent);
+}
