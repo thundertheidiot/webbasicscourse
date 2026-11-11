@@ -97,7 +97,6 @@ main {
 
 .card:hover {
 	background-size: calc(100% + 16px);
-	cursor: pointer;
 }
 
 .cardcontent {
@@ -105,27 +104,24 @@ main {
 	color: var(--white);
 }
 
-.main-grid > .card:nth-child(1) {
+.main-grid .card:nth-child(1) {
 	background-image:
 		var(--background-gradient), url("images/kanenori-train-6907884.webp");
 	background-position: 40% 40%;
 }
 
-.main-grid > .card:nth-child(2) {
+.main-grid .card:nth-child(2) {
 	background-image:
 		var(--background-gradient), url("images/hpgruesen-eurostarzug-2736247.webp");
 	background-position: 30% 30%;
 }
 
-.main-grid > .card:nth-child(3) {
+.main-grid .card:nth-child(3) {
 	background-image:
 		var(--background-gradient), url("images/19752638-train-5905182.webp");
 	background-position: 50% 40%;
 	height: 100%;
 	grid-row: 1 / -1;
-}
-
-@media screen and (min-width: 900px) {
 }
 
 @media screen and (max-width: 900px) {
@@ -134,10 +130,14 @@ main {
 		grid-template-rows: 3fr 2fr;
 	}
 
-	.main-grid > .card:nth-child(3) {
+	.main-grid .card:nth-child(3) {
 		grid-column: 1 / -1;
 		grid-row: unset;
 	}
+}
+
+.main-grid > a {
+	text-decoration: none;
 }
 
 .hero {
@@ -207,6 +207,13 @@ h3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 5px;
+}
+
+@media screen and (max-width: 900px) {
+	.info-cards {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
 }
 
 .info-card {
