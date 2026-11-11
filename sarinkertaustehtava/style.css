@@ -30,8 +30,10 @@ body {
 }
 
 .bar {
+	align-items: center;
 	background-color: var(--light-alt);
 	color: var(--bar-fg);
+	height: 50px;
 }
 
 .bar a,
@@ -40,10 +42,13 @@ body {
 	text-decoration: none;
 }
 
+[aria-current] {
+	font-weight: bold;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	padding: 0 16px;
 	gap: 8px;
 
@@ -54,7 +59,6 @@ header {
 footer {
 	display: flex;
 	padding: 16px 16px;
-
 	justify-content: center;
 }
 
@@ -192,4 +196,80 @@ h3 {
 
 .button:hover {
 	color: var(--accent);
+}
+
+.info-main {
+	background-color: var(--dark-alt);
+	padding: 20px;
+}
+
+.info-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5px;
+}
+
+.info-card {
+	padding: 10px;
+	background-color: var(--white);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: var(--white);
+}
+
+th,
+td {
+	text-align: left;
+	vertical-align: top;
+	padding: 10px;
+}
+
+tr {
+	background-color: var(--light-alt);
+}
+
+th {
+	background-color: var(--white);
+}
+
+details {
+	background-color: var(--white);
+	padding: 10px;
+	margin: 4px;
+}
+
+details > p {
+	display: block;
+	margin: 0;
+	margin-top: 2px;
+	padding: 10px;
+	background-color: var(--light-alt);
+}
+
+.form-main {
+	background-color: var(--dark-alt);
+	padding: 20px;
+	max-width: 80vw;
+	margin: 0 auto;
+}
+
+.form-container,
+.contact-container {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.form label,
+input[type="submit"] {
+	display: block;
+	margin-top: 2px;
+}
+
+input {
+	border: 1px solid var(--dark-alt);
+	border-radius: 6px;
+	width: 100%;
 }

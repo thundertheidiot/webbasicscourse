@@ -1,49 +1,120 @@
 <!doctype html>
-<html>
+<html lang="fi">
 	<head>
 		<meta charset="UTF-8">
+		<title>Matkailuyritys - Matkainfo</title>
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="bar">
-			<p>Matkailuyritys</p>
+			<a href="index.html">Matkailuyritys</a>
 
 			<!-- ei vaadittua hampurilaisvalikkoa -->
 
 			<nav class="valikko">
 				<a href="index.html">Etusivu</a>
 				-
-				<a href="matkainfo.html">Matkainfo</a>
+				<a href="matkainfo.html" aria-current="page">Matkainfo</a>
 				-
 				<a href="matkatoive.html">Matkatoive</a>
 			</nav>
 		</header>
 
 		<main>
-			<section class="index-main">
+			<section class="info-main">
 				<h1>Tietoa matkoista</h1>
 
-				<h2>Mitä hintaan kuuluu</h2>
+				<div class="info-cards">
+					<section class="info-card">
+						<h2>Mitä hintaan kuuluu</h2>
 
-				<p>
-					Matkan hintaan sisältyvät lennot, majoitus ja aamiainen. Tarkempia
-					tietoja löytyy matkakohtaisista kuvauksista.
-				</p>
+						<p>
+							Matkan hintaan sisältyvät lennot, majoitus ja aamiainen. Tarkempia
+							tietoja löytyy matkakohtaisista kuvauksista.
+						</p>
+					</section>
 
-				<h2>Kenelle matka sopii</h2>
+					<section class="info-card">
+						<h2>Kenelle matka sopii</h2>
 
-				<p>
-					Matkat sopivat monenlaisille matkailijoille, voit tulla rentoutumaan
-					tai hankkimaan uusia elämyksiä, yksin tai yhdessä ystävien ja perheesi
-					kanssa.
-				</p>
+						<p>
+							Matkat sopivat monenlaisille matkailijoille, voit tulla
+							rentoutumaan tai hankkimaan uusia elämyksiä, yksin tai yhdessä
+							ystävien ja perheesi kanssa.
+						</p>
+					</section>
 
-				<h3>Milloin kannattaa matkustaa</h3>
+					<section class="info-card">
+						<h2>Milloin kannattaa matkustaa</h2>
 
-				<p>
-					Sopivat ajankohdat riippuvat matkakohteista ja toivotuista
-					kokemuksista, kysy meiltä lisää matkatoiveesi ohessa.
-				</p>
+						<p>
+							Sopivat ajankohdat riippuvat matkakohteista ja toivotuista
+							kokemuksista, kysy meiltä lisää matkatoiveesi ohessa.
+						</p>
+					</section>
+				</div>
+
+				<h2>Matkat vertailussa</h2>
+
+				<table class="info-table">
+					<tr>
+						<th>Matka</th>
+						<th>Maat</th>
+						<th>Kesto</th>
+						<th>Hinta</th>
+						<th>Hintaan sisältyy</th>
+					</tr>
+
+					<tr>
+						<td>Pohjois-Japani</td>
+						<td>Japani</td>
+						<td>5 päivää</td>
+						<td>alkaen 2500&euro;</td>
+						<td>Lennot, 4 yötä hotellissa, aamiaiset, junaliput</td>
+					</tr>
+					<tr>
+						<td>Euroopan halki</td>
+						<td>Ranska Belgia Saksa</td>
+						<td>1 viikko</td>
+						<td>alkaen 1700&euro;</td>
+						<td>
+							Lennot, 6 yötä hotelleissa, aamiaiset, junaliput
+							Pariisi–Bryssel–Köln
+						</td>
+					</tr>
+					<tr>
+						<td>Sveitsin alpit</td>
+						<td>Sveitsi</td>
+						<td>3 päivää</td>
+						<td>alkaen 900&euro;</td>
+						<td>
+							Lennot, 2 yötä hotellissa, aamiaiset, Jungfraujoch-junalippu
+						</td>
+					</tr>
+				</table>
+
+				<h2>Usein kysytyt kysymykset</h2>
+
+				<section>
+					<details>
+						<summary>Voinko jättää osia matkasta pois?</summary>
+						<p>
+							Ei, matka myydään kokonaisuutena, mutta voit pyytää lisäosia
+							matkaasi yhteydenoton ohessa. Et voi esimerkiksi jättää
+							paluulentoa ostamatta.
+						</p>
+					</details>
+
+					<details>
+						<summary>kysymys 2</summary>
+						<p>en jaksa keksiä näitä enää</p>
+					</details>
+
+					<details>
+						<summary>kysymys 3</summary>
+						<p>joo, sivu on ruma, en jaksa tehdä enempää cssää</p>
+					</details>
+				</section>
 			</section>
 		</main>
 

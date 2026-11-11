@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fi">
+	<head>
+		<meta charset="UTF-8">
+		<title>Matkailuyritys - Matkainfo</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="bar">
+			<a href="index.html">Matkailuyritys</a>
+
+			<!-- ei vaadittua hampurilaisvalikkoa -->
+
+			<nav class="valikko">
+				<a href="index.html">Etusivu</a>
+				-
+				<a href="matkainfo.html" aria-current="page">Matkainfo</a>
+				-
+				<a href="matkatoive.html">Matkatoive</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="form-main">
+				<div class="form-container">
+					<h1>Matkatoive</h1>
+
+					<form class="form" method="post">
+						<label for="email">Sähköposti</label>
+						<input name="email" type="email" value="" id="email" required>
+
+						<label for="trip"> Matkakohde</label>
+						<select id="" name="trip" required="">
+							<option value="">Valitse kohde</option>
+							<option value="hokkaido">Hokkaido</option>
+							<option value="europe">Euroopan halki</option>
+							<option value="alps">Jungfraujoch</option>
+						</select>
+
+						<label for="date">Lähtöpäivä</label>
+						<input name="date" type="date" value="2026-12-11" id="date">
+
+						<label for="passengers">Matkustajien määrä</label>
+						<input
+							name="passengers"
+							type="number"
+							value="1"
+							min="1"
+							max="8"
+							id="passengers"
+						>
+
+						<input name="" type="submit" value="Lähetä">
+					</form>
+				</div>
+
+				<br>
+
+				<div class="contact-container">
+					<p>
+						Lähetä meille sähköpostia
+						<a href="mailto:email@matkailuyritys.fi">email@matkailuyritys.fi</a>
+					</p>
+					<p>Tai soita <a href="tel:+358123456789">+358 123 456789</a></p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="bar">
+			<p>
+				Matkailuyritys OY -
+				<a href="mailto:email@matkailuyritys.fi">email@matkailuyritys.fi</a>
+				-
+				<a href="tel:+358123456789">+358 123 456789</a>
+			</p>
+		</footer>
+	</body>
+</html>
